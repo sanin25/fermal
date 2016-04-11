@@ -115,6 +115,7 @@ jQuery.fn.exist = function() {
     $('.bxslider').bxSlider({
           minSlides: 4,
     	  maxSlides: 4,
+          tickerHover: true,
     	  slideWidth: 600,
     	  slideMargin: 5,
     	  ticker: true,
@@ -124,10 +125,8 @@ jQuery.fn.exist = function() {
     	});
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
-        mode: 'fade',
-        slideMargin: 5,
-        pagerType: 'full'
-
+        controls: true,
+        
     	});
     /*Отправка письма*/
 

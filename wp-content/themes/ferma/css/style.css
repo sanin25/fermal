@@ -27,7 +27,7 @@ html, body {
 
 .responsive-img {
   width: 100%;
-  height: auto;
+  /*height: auto;*/
   width: auto;
   display: block;
 }
@@ -294,6 +294,14 @@ section {
   font-size: 77%;
 }
 
+.pitomnikimg {
+  float: left;
+}
+
+.pitomniktext {
+  float: right;
+}
+
 .more {
   clear: both;
 }
@@ -406,10 +414,6 @@ section {
 }
 .katalog h3 a:hover {
   color: #13007A;
-}
-
-.bx-viewport {
-  overflow: visible !important;
 }
 
 #breadcrumbs {

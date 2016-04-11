@@ -27,7 +27,7 @@ html,body {
 }
 .responsive-img {
 	width: 100%;
-	height: auto;
+	/*height: auto;*/
 	width: auto;
 	display: block;
 }
@@ -275,6 +275,12 @@ section {
 		}
 	}
 }
+.pitomnikimg{
+	float:left;
+}
+.pitomniktext{
+	float:right;
+}
 .more {
 	clear: both;
 }
@@ -383,9 +389,7 @@ section {
 		}
 	}
 }
-.bx-viewport{
-	overflow:visible !important;
-}
+
 #breadcrumbs{
 	padding: 20px;
 	font-size: 120%;
