@@ -127,8 +127,11 @@ jQuery.fn.exist = function() {
     $('.pitomnik').bxSlider({
         controls: true,
         wrapperClass: 'pitomnikcarusel',
-        auto: true,
-        pause:3000
+        /*auto: true,*/
+        nextText: 'Вперед',
+        prevText:'Назад',
+        pager:false,
+        pause:2000
         
     	});
     /*Отправка письма*/

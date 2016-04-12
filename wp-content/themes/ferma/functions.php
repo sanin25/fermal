@@ -45,6 +45,10 @@ register_sidebar(); // Регистрируем сайдбар
     return 6;
     }
 
+    function pitomnik_length($lengt) {
+    return 10;
+}
+
     function announcement($length, $more='') {
        global $post;
        add_filter('excerpt_length', $length);
