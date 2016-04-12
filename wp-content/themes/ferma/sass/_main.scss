@@ -275,12 +275,7 @@ section {
 		}
 	}
 }
-.pitomnikimg{
-	float:left;
-}
-.pitomniktext{
-	float:right;
-}
+
 .more {
 	clear: both;
 }
@@ -676,7 +671,38 @@ section {
 	margin: 40px auto;
 	position: relative;
 }
-.bx-wrapper img{
-	max-width: 100%;
-	display: table;
+.pitomnikimg{
+	float:left;
+	width: 50%;
+	img{
+		margin-left: 20px;
+		@include border-radius(25px);
+		@include box-shadow ( 0px 0px 31px -2px rgba(0,0,0,1));
+		margin-left: 20px;
+
+	}
+}
+.pitomniktext{
+	float: right;
+	background: rgb(251, 244, 244);
+	margin-right: 63px;
+	padding: 50px;
+	width: 30%;
+
+	h2{
+		text-align: center;
+		a{
+			color: $color_link;
+		}
+	}
+}
+.pitomnikbody{
+	width: 100%;
+	min-width: 700px;
+	.pitomnikcarusel{
+		.bx-prev{
+			color: #bf3002;
+		}
+	}
+
 }

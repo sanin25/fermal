@@ -25,6 +25,7 @@
             </div>
          <div class="pitomniktext">
                 <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a> </h2>
+             <br/>
                 <?php
                 announcement('segment_length','segment_more');
                 ?>

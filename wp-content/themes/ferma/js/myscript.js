@@ -126,6 +126,9 @@ jQuery.fn.exist = function() {
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
         controls: true,
+        wrapperClass: 'pitomnikcarusel',
+        auto: true,
+        pause:3000
         
     	});
     /*Отправка письма*/
