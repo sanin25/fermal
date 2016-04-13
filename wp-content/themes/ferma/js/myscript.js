@@ -19,7 +19,15 @@ jQuery.fn.exist = function() {
         animate: true,
         animationSpeed: 500,
         tabActiveClass: "active",
-        tabs: "> div > ul > li ",
+        tabs: "> div > ul > li "
+
+    });
+
+    /*tab Питомник*/
+    $("#tab-pitomnik").easytabs({
+        animate: true,
+        animationSpeed: 500,
+        tabs: "> div > ul > li "
 
     });
 
@@ -135,17 +143,19 @@ jQuery.fn.exist = function() {
     	});
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
-        mode: 'fade',
+        mode : 'fade',
+        minSlides: 1,
+        slideWidth: 1178,
         controls: true,
         wrapperClass: 'pitomnikcarusel',
         auto: true,
         nextText: 'Вперед',
         prevText:'Назад',
         pager:false,
-        slideWidth: 1378,
         pause:5000
         
     	});
+
     /*Отправка письма*/
 
     $("#form").submit(function() {
@@ -165,6 +175,8 @@ jQuery.fn.exist = function() {
   });
 
   $('img').addClass('responsive-img');
+
+
 
 
 });
