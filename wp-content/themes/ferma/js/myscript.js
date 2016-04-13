@@ -7,6 +7,7 @@ jQuery.fn.exist = function() {
           height: $(window).height() + 'px'
       });
   }
+
   setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
   $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
 
@@ -35,9 +36,9 @@ jQuery.fn.exist = function() {
   /*Облока*/
   if($('.cont4').exist()){
   var cont4 = $('.cont4').offset().top - par;
-  if( cont4 < 250){
+  if( cont4 < 450){
 
-  	$('.kyri').css('visibility', 'visible').addClass('animated bounceInLeft');
+  	$('.kyri').css('visibility', 'visible').addClass('animated bounceInRight');
 
   var i = $('.cont4').offset().top - par;
   $("#obl1").css({
@@ -54,17 +55,26 @@ jQuery.fn.exist = function() {
 
   if($('.cont5').exist()){
   var cont5 = $('.cont5').offset().top - par;
-    if( cont5 < 250){
+    if( cont5 < 450){
     
-    $('.gusi').css('visibility', 'visible').addClass('animated bounceInRight');
+    $('.gusi').css('visibility', 'visible').addClass('animated bounceInLeft');
     
   }
   }
       if($('.cont6').exist()){
           var cont6 = $('.cont6').offset().top - par;
-          if( cont6 < 250){
+          if( cont6 < 450){
 
-              $('.pavlin').css('visibility', 'visible').addClass('animated bounceInRight');
+              $('.pavlin').css('visibility', 'visible').addClass('animated fadeInUpBig');
+
+          }
+      }
+
+      if($('.cont7').exist()){
+          var cont7 = $('.cont7').offset().top - par;
+          if( cont7 < 450){
+
+              $('.fazan').css('visibility', 'visible').addClass('animated zoomInRight');
 
           }
       }
@@ -125,13 +135,15 @@ jQuery.fn.exist = function() {
     	});
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
+        mode: 'fade',
         controls: true,
         wrapperClass: 'pitomnikcarusel',
-        /*auto: true,*/
+        auto: true,
         nextText: 'Вперед',
         prevText:'Назад',
         pager:false,
-        pause:2000
+        slideWidth: 1378,
+        pause:5000
         
     	});
     /*Отправка письма*/

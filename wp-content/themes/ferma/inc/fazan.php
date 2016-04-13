@@ -17,7 +17,7 @@
 
     <h3><a href="<?php echo get_category_link(5); ?>">Фазаны</a></h3>
     <?php while ( $query->have_posts()) : $query->the_post(); ?>
-        <div class="gusi">
+        <div class="fazan">
             <div class="gusiimg">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(300,200));?></a>
             </div>

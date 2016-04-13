@@ -33,7 +33,6 @@ html, body {
 }
 
 section {
-  display: table;
   width: 100%;
   max-width: 1920px;
   min-width: 800px;
@@ -41,6 +40,7 @@ section {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  display: table;
 }
 
 .cont1 {
@@ -242,7 +242,7 @@ section {
   color: #13007A;
 }
 
-.gusi, .pavlin, .kyri, .category .cat {
+.gusi, .pavlin, .kyri, .fazan, .category .cat {
   margin-top: 50px;
   border: 1px solid #ddd;
   width: 310px;
@@ -739,10 +739,10 @@ section {
   background: #fbf4f4;
   margin-right: 63px;
   margin-top: 4%;
-  padding: 50px;
+  padding: 5px 12px 0 17px;
   width: 30%;
   height: 300px;
-  word-break: break-word;
+  word-break: break-all;
   -moz-box-shadow: 0px 10px 31px -2px black;
   -webkit-box-shadow: 0px 10px 31px -2px black;
   box-shadow: 0px 10px 31px -2px black;
@@ -757,9 +757,11 @@ section {
   background: rgba(216, 208, 208, 0.41);
   border: 1px dotted #AB9595;
   font-family: sans-serif;
+  font-size: 100%;
 }
 .pitomniktext .more:hover {
   color: #3e6408;
+  background: rgba(94, 86, 86, 0.41);
 }
 .pitomniktext h2 {
   text-align: center;
@@ -779,6 +781,7 @@ section {
   position: relative;
   top: -80px;
   right: -78%;
+  z-index: 100;
 }
 .pitomnikbody .pitomnikcarusel .bx-controls-direction .bx-prev {
   color: #1B1B33;
@@ -810,7 +813,7 @@ section {
 
 .hr {
   position: relative;
-  top: -13px;
+  top: -11px;
   border: 0;
   height: 2px;
   background-image: -webkit-linear-gradient(left, transparent, #43687b, transparent);

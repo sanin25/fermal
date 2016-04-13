@@ -6,7 +6,7 @@
  * @subpackage fermerjeck
  */
 ?>
-<div class="gusibody clearfix">
+<div class="gusibody">
 
     <?php
     $args = array(
