@@ -26,12 +26,16 @@ register_sidebar(); // Регистрируем сайдбар
 
         wp_enqueue_script( 'my_magnific', get_template_directory_uri().'/js/jquery.magnific-popup.min.js',array('jquery'));
 
+        wp_enqueue_script( 'my_owl', get_template_directory_uri().'/js/owl.carousel.js',array('jquery'));
+
         /*Css*/
 
         wp_enqueue_style( 'my-mystyle', get_stylesheet_directory_uri().'/css/style.css');
 
         wp_enqueue_style( 'my-animate', get_stylesheet_directory_uri().'/css/animate.css');
 
+        wp_enqueue_style( 'my-magnific', get_stylesheet_directory_uri().'/css/magnific-popup.css');
+        
         wp_enqueue_style( 'my-magnific', get_stylesheet_directory_uri().'/css/magnific-popup.css');
     }
 
@@ -62,7 +66,7 @@ register_sidebar(); // Регистрируем сайдбар
      /*ajax запросы*/
     
     function my_mail_callback(){
-      $recepient = "tootii@mail.ru";
+      $recepient = "snitin@fermaeko.com";
       $name = trim($_POST["name"]);
       $mail= trim($_POST["mail"]);
       $text = trim($_POST["textarea"]);

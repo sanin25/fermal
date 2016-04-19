@@ -14,7 +14,7 @@
         'category__in' => 7
     );
     $query = new WP_Query($args); ?>
-    <div id="tab-pitomnik">
+    <div class="tab-pitomnik">
     <h3><a href="<?php echo get_category_link(7); ?>">Зеленый уголок</a></h3>
         <div id="pitom1">
     <div class="pitomnikbody">
@@ -55,7 +55,7 @@
             $query = new WP_Query($args2); ?>
             <div class="pitomnikbody">
                 <!--tab Питомник растений-->
-                <ul class="pitomnik">
+                <ul class="pitomnik2">
                     <?php while ( $query->have_posts()) : $query->the_post(); ?>
                         <li>
                             <div class="pitomnikimg">

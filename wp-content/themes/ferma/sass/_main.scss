@@ -671,6 +671,8 @@ section {
 	margin: 40px auto;
 	position: relative;
 }
+
+
 .pitomnikimg{
 	float:left;
 	width: 50%;
@@ -830,4 +832,46 @@ section {
 }
 .tab a.active {
 	font-weight: bold;
+}
+.slider{
+	width: 850px;
+	margin: 0 auto;
+	position: relative;
+	border: 5px solid #DDD;
+	border-radius: 5px;
+	padding: 1px;
+}
+.slider-wrapper{
+	float: left;
+	width: 500px;
+}
+.pager{
+	float: left;
+	width: 300px;
+	background: #FAFAFA;
+}
+.pager li{
+	list-style: none;
+	padding: 0 18px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	height: 60px;
+	font: 13px/52px Arial, sans-serif;
+	border-top: 1px solid #DDD;
+	position: relative;
+	cursor: pointer;
+}
+.active{
+	background: #5BA6E3;
+}
+.active:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -30px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 30px 30px 0;
+	border-color: transparent #5BA6E3 transparent transparent;
 }

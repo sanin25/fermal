@@ -36,6 +36,7 @@ get_header(); // Подключаем хедер?>
  <span id="cont8"></span>
 	<section class="heigh cont8 clearfix">
 		<?php get_template_part('inc/pitomnik');?>
+	 
 	</section>
 
 <?php get_sidebar(); // Подключаем сайдбар ?>

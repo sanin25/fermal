@@ -24,10 +24,28 @@ jQuery.fn.exist = function() {
     });
 
     /*tab Питомник*/
-    $("#tab-pitomnik").easytabs({
+    $(".tab-pitomnik").easytabs({
         animate: true,
         animationSpeed: 500,
         tabs: "> div > ul > li "
+
+    });
+    var myslider =  $('.pitomnik2').bxSlider({
+        mode:'fade',
+        minSlides: 1,
+        slideWidth: 1178,
+        controls: true,
+        wrapperClass: 'pitomnikcarusel',
+        auto: true,
+        nextText: 'Вперед',
+        prevText:'Назад',
+        pager:false,
+        pause:5000
+
+    });
+    
+    $('.tab-pitomnik').bind('easytabs:after', function(er) {
+        console.log('ddd');
 
     });
 
@@ -143,7 +161,7 @@ jQuery.fn.exist = function() {
     	});
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
-        mode : 'fade',
+        mode:'fade',
         minSlides: 1,
         slideWidth: 1178,
         controls: true,
@@ -153,15 +171,15 @@ jQuery.fn.exist = function() {
         prevText:'Назад',
         pager:false,
         pause:5000
-        
-    	});
+
+    });
 
     /*Отправка письма*/
 
     $("#form").submit(function() {
     $.ajax({
       type: "POST",
-      url: "/wp-admin/admin-ajax.php",
+      url: "/demo/wp-admin/admin-ajax.php",
       data: $(this).serialize()
     }).done(function(vot) {
       
@@ -177,6 +195,50 @@ jQuery.fn.exist = function() {
   $('img').addClass('responsive-img');
 
 
+    var slider = $('#slider'); // селектор слайдера
+    var pagerItem = $('#slider-pager li'); // селектор пункта пагинатора
+    var active = 'active'; // класс активного пункта пагинатора
+
+    if ( slider.length ) {
+        var prev = false;
+        function pager() {
+            pagerItem.filter('.' + active).each(function() {
+                var el = $(this);
+                if (prev) {
+                    if ( el.is(':first-child') ) {
+                        el.removeClass(active);
+                        pagerItem.filter(':last').addClass(active);
+                    } else el.removeClass(active).prev().addClass(active);
+                } else {
+                    if ( el.is(':last-child') ) {
+                        el.removeClass(active);
+                        pagerItem.filter(':first').addClass(active);
+                    } else el.removeClass(active).next().addClass(active);
+                }
+            })
+        }
+        slider.bxSlider({
+            // опции плагина
+            controls: true,
+            pager: false,
+            auto: true,
+            autoHover: true,
+            pause: 5000,
+            onSlidePrev: function() { prev = true; pager(); },
+            onSlideNext: function() { prev = false; pager(); }
+            // конец опций
+        });
+        pagerItem.click(function() {
+            slider.stopAuto();
+            var index = pagerItem.index($(this));
+            slider.finish().goToSlide(index);
+            pagerItem.removeClass(active);
+            $(this).addClass(active);
+        }).mouseleave(function() {
+            slider.startAuto();
+        });
+        pagerItem.filter(':first').addClass(active);
+    }
 
 
 });
