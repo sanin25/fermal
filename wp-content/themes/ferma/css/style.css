@@ -570,13 +570,17 @@ section {
   float: left;
 }
 
+#respond {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .comment-form-comment {
   padding: 25px;
   background: rgba(172, 185, 172, 0.39);
   -moz-border-radius: 12px;
   -webkit-border-radius: 12px;
   border-radius: 12px;
-  margin: 51px 0;
 }
 .comment-form-comment label {
   color: #495428;
@@ -592,7 +596,7 @@ section {
 
 #submit {
   padding: 10px;
-  margin: 25px;
+  margin: 23px 0 0 36px;
   width: 138px;
   height: 36px;
   border-radius: 11px;
@@ -610,6 +614,8 @@ section {
   -webkit-border-radius: 25px;
   border-radius: 25px;
   list-style-type: none;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .comment-form-author label {
@@ -698,7 +704,7 @@ section {
 }
 
 #comment-image-reloaded-wrapper {
-  margin: 10px;
+  margin: 10px 0 10px 73px;
 }
 
 .comment-reply-title {
@@ -890,51 +896,69 @@ section {
 }
 
 .slider {
-  width: 850px;
   margin: 0 auto;
   position: relative;
-  border: 5px solid #DDD;
+  border: 5px solid #2B4B20;
   border-radius: 5px;
   padding: 1px;
+  background: rgba(44, 68, 36, 0.29);
 }
 
 .slider-wrapper {
   float: left;
-  width: 500px;
+  width: 300px;
+}
+.slider-wrapper li a img {
+  width: 100% !important;
+  height: 251px !important;
 }
 
 .pager {
   float: left;
-  width: 300px;
+  width: 360px;
   background: #FAFAFA;
 }
 
-.pager li {
+.pager div {
   list-style: none;
+  display: block;
   padding: 0 18px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: 60px;
+  height: 50px;
   font: 13px/52px Arial, sans-serif;
   border-top: 1px solid #DDD;
   position: relative;
   cursor: pointer;
 }
 
-.active {
+.activeint {
   background: #5BA6E3;
 }
 
-.active:before {
+.activeint:before {
   content: '';
   position: absolute;
   top: 0;
-  left: -30px;
+  left: -25px;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 30px 30px 30px 0;
+  border-width: 25px 25px 25px 0;
   border-color: transparent #5BA6E3 transparent transparent;
+}
+
+#interesting_articles {
+  background: rgba(209, 226, 65, 0.21);
+  padding: 17px;
+  border: 2px solid #AB9BA2;
+  margin-top: 20px;
+  margin-bottom: 26px;
+}
+#interesting_articles h3 {
+  text-align: center;
+  padding: 10px;
+  color: green;
 }
 
 .bx-wrapper {

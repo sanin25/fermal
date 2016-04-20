@@ -21,12 +21,11 @@ get_header(); // Подключаем хедер?>
             <?php endwhile; // Конец цикла
             wp_reset_query();
             ?>
-            <?php comments_template('/comments.php'); ?>
         </div>
 
         <div id="interesting_articles">
 
-            <h3>Интересное на блоге</h3>
+            <h3>Возможно Вам будет интересно</h3>
             <?php
             $categories = get_the_category($post->ID);
             if ($categories) {
@@ -36,7 +35,7 @@ get_header(); // Подключаем хедер?>
 
                     'category__in' =>  $tag_ids,  //сортировка по тегам (меткам)
                     'post__not_in' => array($post->ID),
-                    'showposts'=>4,  //количество выводимых ячеек
+                    'showposts'=>5,  //количество выводимых ячеек
                     'orderby'=>'rand', // в случайном порядке
                     'ignore_sticky_posts'=>1); //исключаем одинаковые записи
                 $my_query = new wp_query($args);
@@ -52,8 +51,7 @@ get_header(); // Подключаем хедер?>
                             $texts[$i] = the_title('','',false);
                             ?>
                             <li>
-          <?php the_title();?>
-                                    <a   href="<?php the_permalink() ?>"><?php the_post_thumbnail(array(450,300)); ?></a>
+                                    <a   href="<?php the_permalink() ?>"><?php the_post_thumbnail(array(350,250)); ?></a>
 
                             </li>
                             <?php
@@ -62,9 +60,9 @@ get_header(); // Подключаем хедер?>
                     echo "</div>";
                     echo "<div id='slider-pager' class='pager'>";
                     foreach ($texts as $test => $t) {
-                        echo '<li>';
+                        echo '<div>';
                         echo $t;
-                        echo '</li>';
+                        echo '</div>';
                     }
                         echo "</div>";
                         echo "</div>";
@@ -74,6 +72,7 @@ get_header(); // Подключаем хедер?>
             }
             ?>
         </div>
+        <?php comments_template('/comments.php'); ?>
     </section>
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

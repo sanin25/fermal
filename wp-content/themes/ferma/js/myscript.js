@@ -196,8 +196,8 @@ jQuery.fn.exist = function() {
 
 
     var slider = $('#slider'); // селектор слайдера
-    var pagerItem = $('#slider-pager li'); // селектор пункта пагинатора
-    var active = 'active'; // класс активного пункта пагинатора
+    var pagerItem = $('#slider-pager div'); // селектор пункта пагинатора
+    var active = 'activeint'; // класс активного пункта пагинатора
 
     if ( slider.length ) {
         var prev = false;
@@ -219,10 +219,13 @@ jQuery.fn.exist = function() {
         }
         slider.bxSlider({
             // опции плагина
-            controls: true,
+            controls: false,
+            minSlides: 1,
+            slideWidth: 578,
             pager: false,
             auto: true,
-            autoHover: true,
+            wrapperClass: '',
+            useCSS: false,
             pause: 5000,
             onSlidePrev: function() { prev = true; pager(); },
             onSlideNext: function() { prev = false; pager(); }
