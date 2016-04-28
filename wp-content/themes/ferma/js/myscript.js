@@ -23,32 +23,6 @@ jQuery.fn.exist = function() {
 
     });
 
-    /*tab Питомник*/
-    $(".tab-pitomnik").easytabs({
-        animate: true,
-        animationSpeed: 500,
-        tabs: "> div > ul > li "
-
-    });
-    var myslider =  $('.pitomnik2').bxSlider({
-        mode:'fade',
-        minSlides: 1,
-        slideWidth: 1178,
-        controls: true,
-        wrapperClass: 'pitomnikcarusel',
-        auto: true,
-        nextText: 'Вперед',
-        prevText:'Назад',
-        pager:false,
-        pause:5000
-
-    });
-    
-    $('.tab-pitomnik').bind('easytabs:after', function(er) {
-        console.log('ddd');
-
-    });
-
   /*Паралакс*/
   $(window).scroll(function() {
   var par = $(this).scrollTop();
@@ -68,9 +42,9 @@ jQuery.fn.exist = function() {
 
   var i = $('.cont4').offset().top - par;
   $("#obl1").css({
-  	 "transform" :"translate3d(" + i / 2 + "%," + i/8  + "%, 0px)",
+  	 "transform" :"translate3d(" + i * 1 + "%, 0%, .0px)",
     "-webkit-transform" : "translate3d(" + i * 1 + "%, 0%, .0px)",
-    "-moz-transform" : "translate3d(" + i / 2 + "%, "+ i/8  +"%, 0px)"
+    "-moz-transform" : "translate3d(" + i * 1 + "%, 0%, .0px)"
   	});
    $("#obl2").css({
   	"right" :"" + par /60 + "%",
@@ -151,6 +125,7 @@ jQuery.fn.exist = function() {
     $('.bxslider').bxSlider({
           minSlides: 4,
     	  maxSlides: 4,
+        controls: true,
           tickerHover: true,
     	  slideWidth: 600,
     	  slideMargin: 5,
@@ -159,6 +134,7 @@ jQuery.fn.exist = function() {
     	  speed: 49000
 
     	});
+
     /*Слайден Питомника*/
     $('.pitomnik').bxSlider({
         mode:'fade',
@@ -231,7 +207,7 @@ jQuery.fn.exist = function() {
             onSlideNext: function() { prev = false; pager(); }
             // конец опций
         });
-        pagerItem.click(function() {
+        pagerItem.hover(function() {
             slider.stopAuto();
             var index = pagerItem.index($(this));
             slider.finish().goToSlide(index);
@@ -243,5 +219,20 @@ jQuery.fn.exist = function() {
         pagerItem.filter(':first').addClass(active);
     }
 
+    /*Поиск*/
+    $('#imgsearch').click(function(){
+        $(this).hide(500);
+        $('.search').css({
+            "transform": "translate(0%, 10px)",
+            "transition": "transform 500ms"
+        },500);
+    });
+    $("#closesearch").click(function(){
+        $('#imgsearch').show(500);
+        $('.search').css({
+            "transform": "translate(-100%,0px)",
+            "transition": "transform 100ms"
+        },500);
+    });
 
 });

@@ -1,6 +1,45 @@
 $color_link : rgb(14, 85, 5);
 $color_hover :  #13007A;
 $color_border : rgba(68, 91, 158, 0.86);
+
+@include max-screen(700){
+	.cont1{
+		background: url(../img/cont5.jpg) !important;
+	}
+
+}
+@media only screen and (max-width: 1000px) {
+	.cont1{
+		background: url(../img/query/cont1.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont3{
+		background: url(../img/query/cont3.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont4{
+		background: url(../img/query/cont4.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont5{
+		background: url(../img/query/cont5.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont6{
+		background: url(../img/query/cont6.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont7{
+		background: url(../img/query/cont7.jpg) !important;
+		background-size: cover !important;
+	}
+	.cont8{
+		background: url(../img/query/cont8.jpg) !important;
+		background-size: cover !important;
+	}
+
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -898,3 +937,51 @@ section {
 		color: green;
 	}
 }
+
+.search{
+	position: fixed;
+	z-index: 1;
+	@include transform(translate(-100%));
+	.searchform{
+		#closesearch{
+			position: relative;
+			top: -32px;
+			z-index: 5;
+			&:hover{
+				background: url(../img/close-hover.png) 0 0 no-repeat;
+				cursor: pointer;
+				@include transform(scale(1.1));
+			}
+		}
+	}
+}
+
+#imgsearch{
+	width: 94px;
+	height: 92px;
+	position: fixed;
+	left: -2%;
+	top: 81px;
+	cursor: pointer;
+	z-index: 1;
+	&:hover{
+		@include transform(scale(1.1));
+	}
+}
+#searchform{
+	z-index: 4;
+	position: relative;
+	left: 17px;
+	#formainput{
+		border: none;
+		height: 27px;
+		padding-left: 5px;
+	}
+}
+#searchformimg{
+	position: relative;
+	z-index: 1;
+	top: 69px;
+	z-index: 1;
+}
+
