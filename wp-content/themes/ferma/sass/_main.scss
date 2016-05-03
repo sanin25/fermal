@@ -957,10 +957,10 @@ section {
 }
 
 #imgsearch{
-	width: 94px;
-	height: 92px;
+	width: 60px;
+	height: 60px;
 	position: fixed;
-	left: -2%;
+	left: -1%;
 	top: 81px;
 	cursor: pointer;
 	z-index: 1;
@@ -984,4 +984,43 @@ section {
 	top: 69px;
 	z-index: 1;
 }
+.searchsection{
+    background: rgba(196, 208, 204, 0.4);
+.searchpage{
+	margin:0 auto;
+	width:80%;
+	.searchbody{
+		border: 1px solid #826d6d;;
+		margin:10px;
+		padding: 45px;
+		@include  box-shadow( 0px 0px 14px 2px rgba(97, 158, 59, 0.75));
+		@include border-radius(5px)
+	}
+}
+}
+.page-numbers{
+	margin: 6px;
+	position: relative;
+	bottom: 3px;
+	.current{
+		font-size: 110%;
+		color: green;
+		font-style: oblique;
+	}
+	li{
+		float: left;
+		margin-right: 19px;
+		display: block;
+		background: #969690;
+		border: 2px solid rgba(93, 88, 88, 0.57);
+		@include border-radius(7px);
+		a{
+			color: #000000;
+			font-size: 105%;
+		}
+		&:hover{
+			background: #d6ded7;
+		}
 
+	}
+}

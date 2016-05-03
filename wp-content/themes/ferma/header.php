@@ -71,7 +71,9 @@
 <div class="kontackt">
 <?php get_template_part('inc/contact');?>
 </div>
+
 <img id="imgsearch" src="<?php echo get_template_directory_uri();?>/img/search.png">
+
 <div class="search">
 	<div class="searchform">
 		<img id="searchformimg" src="<?php echo get_template_directory_uri();?>/img/searchform.png">

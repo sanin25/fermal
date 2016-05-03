@@ -1025,10 +1025,10 @@ section {
 }
 
 #imgsearch {
-  width: 94px;
-  height: 92px;
+  width: 60px;
+  height: 60px;
   position: fixed;
-  left: -2%;
+  left: -1%;
   top: 81px;
   cursor: pointer;
   z-index: 1;
@@ -1056,6 +1056,53 @@ section {
   z-index: 1;
   top: 69px;
   z-index: 1;
+}
+
+.searchsection {
+  background: rgba(196, 208, 204, 0.4);
+}
+.searchsection .searchpage {
+  margin: 0 auto;
+  width: 80%;
+}
+.searchsection .searchpage .searchbody {
+  border: 1px solid #826d6d;
+  margin: 10px;
+  padding: 45px;
+  -moz-box-shadow: 0px 0px 14px 2px rgba(97, 158, 59, 0.75);
+  -webkit-box-shadow: 0px 0px 14px 2px rgba(97, 158, 59, 0.75);
+  box-shadow: 0px 0px 14px 2px rgba(97, 158, 59, 0.75);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.page-numbers {
+  margin: 6px;
+  position: relative;
+  bottom: 3px;
+}
+.page-numbers .current {
+  font-size: 110%;
+  color: green;
+  font-style: oblique;
+}
+.page-numbers li {
+  float: left;
+  margin-right: 19px;
+  display: block;
+  background: #969690;
+  border: 2px solid rgba(93, 88, 88, 0.57);
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+.page-numbers li a {
+  color: #000000;
+  font-size: 105%;
+}
+.page-numbers li:hover {
+  background: #d6ded7;
 }
 
 .bx-wrapper {
