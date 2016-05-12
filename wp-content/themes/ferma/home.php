@@ -6,7 +6,7 @@
  * @subpackage fermerjeck
  */
 get_header(); // Подключаем хедер?> 
-	<section class="heigh cont1 clearfix">
+	<section class="heigh2 cont1 clearfix">
 		<img src="<?php echo get_template_directory_uri()?>/img/logo.png" alt="Эко ферма" id="logo">
 	</section>
 

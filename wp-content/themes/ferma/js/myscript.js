@@ -3,13 +3,28 @@ jQuery.fn.exist = function() {
    return $(this).length;
 }
   function setHeiHeight() {
-      $('.heigh').css({
-          height: $(window).height() + 'px'
-      });
-  }
+        $('.heigh').css({
+            height: $(window).height() + 'px'
+        });
+    }
+
+    function setHeiHeight2() {
+        $('.heigh2').css({
+            height: $(window).height() + 'px'
+        });
+    }
+
+    function setAuto() {
+        $('.heigh').css({
+            height:'auto'
+        });
+    }
 
   setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-  $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+    setHeiHeight2();
+
+    setTimeout(setAuto, 1000);
+  $(window).resize(setHeiHeight2)
 
 /*Конец высоты*/
 /*Текст к картинкам контакты*/
