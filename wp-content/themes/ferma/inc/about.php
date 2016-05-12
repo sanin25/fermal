@@ -9,40 +9,33 @@
 	<div id="tab-container" class="about clearfix">
 	<h3>Дружный фермер</h3>
 
+		<?php
+		$mypost = array( 'post_type' => 'fermer', );
+		$loop = new WP_Query( $mypost );
+		$idp = [];
+		$textpost = [];
+		?>
+
 	  <div class="fotoin clearfix">
 
 		  <ul>
-		  <li class="active"><a href="#tab1"><img src="<?php echo get_template_directory_uri()?>/img/foto/jen.jpg" alt=""></a></li>
-		  <li><a href="#tab2"><img src="<?php echo get_template_directory_uri()?>/img/foto/jadan.jpg" alt="" ></a></li>
-		  <li><a href="#tab3"><img src="<?php echo get_template_directory_uri()?>/img/foto/vas.jpg" alt="" ></a></li>
-		  <li><a href="#tab4"><img src="<?php echo get_template_directory_uri()?>/img/foto/kh.jpg" alt=""></a></li>
-		  </ul>
+			  <?php while ( $loop->have_posts() ) : $loop->the_post();?>
+		  <li class="active"><a href="#<?php the_ID(); ?>"><?php the_post_thumbnail(array(300,200));?></a></a></li>
 
+				  <?php $idp[get_the_ID()] =  get_the_content(); ?>
+
+			   <?php endwhile; ?>
+		  </ul>
+		  <?php wp_reset_query(); ?>
 	  </div>
 		<div class="textunber panel-container">
 
-			<div id="tab1" class="activ"> Один
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolore illo iure nostrum
-				obcaecati, recusandae rerum sapiente voluptatum? Adipisci dicta est impedit, magni neque omnis quod
-				saepe tempore velit veritatis.
-			</div>
-			<div id="tab2">Два
-				Assumenda dolorum explicabo impedit itaque magni minima numquam saepe sapiente, temporibus? Alias in,
-				ipsam libero nobis quas temporibus! A asperiores commodi doloribus, enim ipsa nobis nulla odit
-				repellendus vel voluptates.
-			</div>
-			<div id="tab3">Три
-				Accusamus architecto dolorem ducimus exercitationem fugit labore nihil optio repellat sit. Accusamus
-				consectetur debitis, dolor ea eveniet facere mollitia numquam odit sit voluptate? Consequuntur
-				exercitationem fuga, hic nobis officia qui!
-			</div>
-			<div id="tab4">Четыри
-				Alias distinctio doloribus eius exercitationem expedita fuga ipsam itaque laudantium maiores, minus
-				Alias distinctio doloribus eius exercitationem expedita fuga ipsam itaque laudantium maiores, minus
-				neque nobis odit perferendis quae quibusdam. Et nulla odit optio! Amet eaque illum nostrum ratione?
-				Aperiam consequuntur, minima?
-			</div>
+			<?php foreach($idp as $kye => $cont):?>
 
-		</div>
+			<div id="<?php echo $kye; ?>" class="activ">
+				<?php echo $cont?>
+			</div>
+			<?php endforeach;?>
+
 		  </div>
 

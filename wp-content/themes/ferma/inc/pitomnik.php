@@ -22,7 +22,7 @@
     <?php while ( $query->have_posts()) : $query->the_post(); ?>
             <li>
             <div class="pitomnikimg">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(800,600));?></a>
+                <a href="<?php the_ID(); ?>"><?php the_post_thumbnail(array(800,600));?></a>
             </div>
          <div class="pitomniktext">
                 <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a> </h2>

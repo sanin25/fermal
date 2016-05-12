@@ -85,5 +85,44 @@ register_sidebar(); // Регистрируем сайдбар
     add_action('wp_ajax_nopriv_my_mail', 'my_mail_callback');
 
 
+function is_user_role( $role, $user_id = null ) {
+    $user = is_numeric( $user_id ) ? get_userdata( $user_id ) : wp_get_current_user();
+
+    if( ! $user )
+        return false;
+
+    return in_array( $role, (array) $user->roles );
+}
+
+if( is_user_role( 'editor' ) ){
+
+    function remove_menus(){
+    remove_menu_page( 'index.php' );                    //Записи
+	remove_menu_page( 'upload.php' );                 //Медиафайлы
+	remove_menu_page( 'edit.php?post_type=page' );         //Комментарии
+	remove_menu_page( 'themes.php' );                 //Внешний вид
+	remove_menu_page( 'plugins.php' );                //Плагины
+	remove_menu_page( 'users.php' );                  //Пользователи
+	remove_menu_page( 'tools.php' );                  //Инструменты
+	remove_menu_page( 'options-general.php' );        //Параметры
+	remove_menu_page( 'profile.php' );        //Параметры
+}
+add_action( 'admin_menu', 'remove_menus' );
+    add_action( 'admin_menu', 'my_remove_menu_pages' );
+    function my_remove_menu_pages() {
+        remove_submenu_page('edit.php','edit-tags.php?taxonomy=post_tag');
+    }
+
+
+
+    function wph_new_toolbar() {
+        global $wp_admin_bar;
+        $wp_admin_bar->remove_menu('new-content'); //меню "добавить"
+        $wp_admin_bar->remove_menu('updates');     //меню "обновления"
+        $wp_admin_bar->remove_menu('wp-logo');     //меню "о wordpress"
+        $wp_admin_bar->remove_menu('wpseo-menu');     //меню "о wordpress"
+    }
+    add_action('wp_before_admin_bar_render', 'wph_new_toolbar');
+}
 
 ?>

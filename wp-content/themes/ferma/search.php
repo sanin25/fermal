@@ -37,7 +37,7 @@ echo paginate_links( array(
 	'current' => max( 1, get_query_var('paged') ),
 	'type' => 'list',
 	'prev_text'    => __('« Назад'),
-    'next_text'    => __('Вперед »'),
+    'next_text'    => __('Вперёд »'),
 	'total' => $wp_query->max_num_pages
 ) );
 ?>
