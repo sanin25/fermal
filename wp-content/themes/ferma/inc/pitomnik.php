@@ -14,7 +14,7 @@
         'category__in' => 7
     );
     $query = new WP_Query($args); ?>
-    <h3><a href="<?php echo get_category_link(7); ?>">Зеленый уголок</a></h3>
+    <h3><a href="<?php echo get_category_link(7); ?>">Эко питомник</a></h3>
         <div id="pitom1">
     <div class="pitomnikbody">
         <!--tab Питомник растений-->

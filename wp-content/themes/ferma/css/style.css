@@ -236,7 +236,6 @@ section {
 .textunber {
   margin: 0 auto;
   display: block;
-  width: 77%;
   padding: 25px;
   background: rgba(34, 35, 33, 0.11);
   border-radius: 15px 15px 15px 15px;
@@ -247,6 +246,12 @@ section {
   -webkit-box-shadow: 0px 0px 26px 3px #ccbacc;
   -moz-box-shadow: 0px 0px 26px 3px #ccbacc;
   box-shadow: 0px 0px 26px 3px #ccbacc;
+}
+.textunber .gallery-item img {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 2px solid #3c5839;
 }
 
 #obl2 {
@@ -1104,6 +1109,11 @@ section {
 }
 .page-numbers li:hover {
   background: #d6ded7;
+}
+
+.alignnone {
+  float: left;
+  margin: 8px;
 }
 
 .bx-wrapper {

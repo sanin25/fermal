@@ -9,7 +9,7 @@
 
 get_header(); // Подключаем хедер ?>
 
-	<section class="category clearfix">
+	<section class="category heigh2 clearfix">
 	<?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 

@@ -225,7 +225,6 @@ section {
 
 	margin: 0 auto;
 	display: block;
-	width: 77%;
 	padding: 25px;
 	background: rgba(34, 35, 33, 0.11);
 	border-radius: 15px 15px 15px 15px;
@@ -236,6 +235,10 @@ section {
 	-webkit-box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
 	-moz-box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
 	box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
+	.gallery-item img{
+		@include border-radius(50px);
+		border: 2px solid rgb(60, 88, 57);
+	}
 }
 #obl2 {
 	left: 250px;
@@ -1024,4 +1027,9 @@ section {
 		}
 
 	}
+}
+.alignnone{
+	float: left;
+	margin: 8px;
+
 }

@@ -13,7 +13,7 @@
 		$mypost = array( 'post_type' => 'fermer', );
 		$loop = new WP_Query( $mypost );
 		$idp = [];
-		$textpost = [];
+		$attachments = [];
 		?>
 
 	  <div class="fotoin clearfix">
@@ -22,7 +22,12 @@
 			  <?php while ( $loop->have_posts() ) : $loop->the_post();?>
 		  <li class="active"><a href="#<?php the_ID(); ?>"><?php the_post_thumbnail(array(300,200));?></a></a></li>
 
-				  <?php $idp[get_the_ID()] =  get_the_content(); ?>
+				  <?php $idp[get_the_ID()] =   announcement('about_length','segment_more',$echo = true);
+				  $attachments = get_attached_media( '', $post->ID );
+
+
+				  ?>
+
 
 			   <?php endwhile; ?>
 		  </ul>
@@ -30,12 +35,16 @@
 	  </div>
 		<div class="textunber panel-container">
 
-			<?php foreach($idp as $kye => $cont):?>
+			<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 
-			<div id="<?php echo $kye; ?>" class="activ">
-				<?php echo $cont?>
-			</div>
-			<?php endforeach;?>
+			<div id="<?php the_ID(); ?>" class="">
+				<?php
+				the_content()
+				?>
+				</div>
 
+			<?php endwhile; ?>
+
+			<?php wp_reset_query(); ?>
 		  </div>
 
