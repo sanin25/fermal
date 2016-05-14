@@ -26,8 +26,6 @@ register_sidebar(); // Регистрируем сайдбар
 
         wp_enqueue_script( 'my_magnific', get_template_directory_uri().'/js/jquery.magnific-popup.min.js',array('jquery'));
 
-        wp_enqueue_script( 'my_owl', get_template_directory_uri().'/js/owl.carousel.js',array('jquery'));
-
         /*Css*/
 
         wp_enqueue_style( 'my-mystyle', get_stylesheet_directory_uri().'/css/style.css');

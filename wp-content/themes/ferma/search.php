@@ -6,7 +6,7 @@
  * @subpackage fermerjeck
  */
 get_header(); // Подключаем хедер?>
-<section class="searchsection">
+<section class="searchsection heigh2">
 <?php if ( function_exists('yoast_breadcrumb') )
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 <div class="searchpage">

@@ -20,13 +20,8 @@
 
 		  <ul>
 			  <?php while ( $loop->have_posts() ) : $loop->the_post();?>
+
 		  <li class="active"><a href="#<?php the_ID(); ?>"><?php the_post_thumbnail(array(300,200));?></a></a></li>
-
-				  <?php $idp[get_the_ID()] =   announcement('about_length','segment_more',$echo = true);
-				  $attachments = get_attached_media( '', $post->ID );
-
-
-				  ?>
 
 
 			   <?php endwhile; ?>
@@ -38,6 +33,9 @@
 			<?php while ( $loop->have_posts() ) : $loop->the_post();?>
 
 			<div id="<?php the_ID(); ?>" class="">
+				<h2><?php the_title();?></h2>
+				<div class="img"><?php the_post_thumbnail(array(400,300));?></div>
+				<hr class="hr">
 				<?php
 				the_content()
 				?>
