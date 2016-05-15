@@ -25,8 +25,8 @@ jQuery.fn.exist = function() {
 
     setTimeout(setAuto, 1000);
   $(window).resize(setHeiHeight2)
-
-/*Конец высоты*/
+    about
+    /*Конец высоты*/
 /*Текст к картинкам контакты*/
 
 
@@ -138,14 +138,15 @@ jQuery.fn.exist = function() {
   /*Слайдер*/
   
     $('.bxslider').bxSlider({
-          minSlides: 4,
+        minSlides: 4,
     	  maxSlides: 4,
         controls: true,
-          tickerHover: true,
+        nextText: 'Вперед',
+        prevText:'Назад',
     	  slideWidth: 600,
     	  slideMargin: 5,
     	  ticker: true,
-          responsive: true,
+        responsive: true,
     	  speed: 49000
 
     	});

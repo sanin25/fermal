@@ -3,9 +3,7 @@ $color_hover :  #13007A;
 $color_border : rgba(68, 91, 158, 0.86);
 
 @include max-screen(700){
-	.cont1{
-		background: url(../img/cont5.jpg) !important;
-	}
+	
 
 }
 @media only screen and (max-width: 1000px) {
@@ -176,11 +174,12 @@ section {
 
 	letter-spacing: 2px;
 }
+
 .about {
 	margin: 0 auto;
 	padding: 60px;
 	display: block;
-	width: 80%;
+	width: 89%;
 	h3 {
 		visibility: hidden;
 		text-align: center;
@@ -192,6 +191,7 @@ section {
 		visibility: hidden;
 		margin: 0 auto;
 		padding: 25px;
+
 		ul li{
 			float: left;
 			a img {
@@ -200,10 +200,8 @@ section {
 				min-width: 150px;
 				margin-left: 20px;
 				float: left;
-				border-radius: 200px 200px 200px 200px;
-				-moz-border-radius: 200px 200px 200px 200px;
-				-webkit-border-radius: 200px 200px 200px 200px;
 				border: 1px solid #0E5505;
+				@include border-radius(200px 200px 200px 200px);
 				-webkit-transition: all 0.5s ease-in-out;
 				-o-transition: all 0.5s ease-in-out;
 				-ms-transition: all 0.5s ease-in-out;
@@ -235,17 +233,30 @@ section {
 	-webkit-box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
 	-moz-box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
 	box-shadow: 0px 0px 26px 3px rgba(204,186,204,1);
+	 .content{
+	 	border-bottom: 2px outset #E2E2E2;
+	     clear: both;
+	     padding:15px;
+	     @include box-shadow(0px 21px 18px -5px rgba(140, 116, 2, 0.35));
+	      @include border-radius(5px);
+
+	 }
 	 .img img{
 		@include box-shadow (9px -1px 14px -4px rgba(52,71,55,1));
 		 @include border-radius(5px);
 		 margin-bottom:20px;
+		 float:left;
 	}
 	h2{
-		text-align: center;
-		font-family: inherit;
-		color: #716611;
-		border-bottom: 2px solid #43687b;
-		margin-bottom: 6px;
+			text-align: center;
+		    font-family: inherit;
+		    font-size: 111%;
+		    word-wrap: break-word;
+		    color: #716611;
+		    margin-bottom: 6px;
+		    margin-left: 260px;
+		    position: relative;
+		    top: 37px;
 	}
 	.gallery-item img{
 		@include border-radius(50px);
@@ -295,9 +306,7 @@ section {
 	overflow: hidden;
 	text-align: center;
 	z-index: 1;
-	border-radius: 4px 4px 4px 4px;
-	-moz-border-radius: 4px 4px 4px 4px;
-	-webkit-border-radius: 4px 4px 4px 4px;
+	@include border-radius(4px 4px 4px 4px);
 	word-wrap: break-word;
 	visibility: hidden;
 	height: 408px;
